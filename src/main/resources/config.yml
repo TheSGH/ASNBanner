@@ -1,0 +1,10 @@
+enable: true
+
+# 0 is blacklist mode
+# 1 is whitelist mode
+mode: 0
+
+list:
+  - 1234
+  - 5678
+  - 9101
