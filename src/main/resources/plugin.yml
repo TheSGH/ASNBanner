@@ -3,3 +3,4 @@ version: '${version}'
 main: com.theloneguy.plugins.asnbanner.AsnBanner
 api-version: 1.13
 authors: [ TheSGH ]
+prefix: "ASN Banner"

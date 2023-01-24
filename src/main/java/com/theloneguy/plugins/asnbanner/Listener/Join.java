@@ -7,7 +7,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 
 import java.util.List;
-import java.util.logging.Level;
 
 public class Join implements Listener {
 
@@ -15,11 +14,11 @@ public class Join implements Listener {
     public void onJoin(AsyncPlayerPreLoginEvent e) {
 
 
-        String ip = e.getAddress().toString().replace("/","");
+        String ip = e.getAddress().toString().replace("/", "");
 
         String asn = Request.doRequest(ip);
 
-        if (asn == null){
+        if (asn == null) {
 
             e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "Error Check Console !");
 
