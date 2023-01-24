@@ -32,15 +32,15 @@ jobs:
         run: cat version >> $GITHUB_ENV
 
       - name: Rename File
-        run: mv plugin.jar NoRegisterAuth-${{ env.PLUGIN_VERSION }}.jar
+        run: mv plugin.jar ASNBanner-${{ env.PLUGIN_VERSION }}.jar
 
       - name: Create a Release
         uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
-          name: NoRegisterAuth v${{ env.PLUGIN_VERSION }}-${{ github.run_number }}
+          name: ASNBanner v${{ env.PLUGIN_VERSION }}-${{ github.run_number }}
           tag_name: ${{ env.PLUGIN_VERSION }}-${{ github.run_number }}+${{ github.run_attempt }}
-          files: NoRegisterAuth-${{ env.PLUGIN_VERSION }}.jar
+          files: ASNBanner-${{ env.PLUGIN_VERSION }}.jar
 
   build:
     name: Build Plugin
