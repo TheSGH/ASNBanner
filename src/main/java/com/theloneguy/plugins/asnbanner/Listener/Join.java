@@ -20,7 +20,7 @@ public class Join implements Listener {
 
         if (asn == null) {
 
-            e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "Error Check Console !");
+            e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "Error, Please Try Again Later !");
 
         }
 
@@ -33,7 +33,7 @@ public class Join implements Listener {
             e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "You are Banned !");
         }
 
-        e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "Error Check Console !");
+        e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "Error, Please Try Again Later !");
 
 
     }

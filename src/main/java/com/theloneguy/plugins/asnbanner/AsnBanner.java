@@ -15,7 +15,7 @@ public final class AsnBanner extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         plugin = this;
-        logger = getLogger();
+        logger = this.getLogger();
 
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();

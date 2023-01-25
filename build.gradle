@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.theloneguy.plugins'
-version = '1.0.0-SNAPSHOT'
+version = '1.0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -18,8 +18,17 @@ repositories {
     }
 }
 
+test {
+    useJUnitPlatform()
+}
+
+
 dependencies {
     compileOnly 'org.spigotmc:spigot-api:1.13-R0.1-SNAPSHOT'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+
+
     implementation 'com.konghq:unirest-java:3.11.09'
     implementation 'org.json:json:20220924'
 }
