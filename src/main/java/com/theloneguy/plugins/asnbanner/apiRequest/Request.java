@@ -1,10 +1,7 @@
 package com.theloneguy.plugins.asnbanner.apiRequest;
 
-import com.theloneguy.plugins.asnbanner.AsnBanner;
 import kong.unirest.Unirest;
 import org.json.JSONObject;
-
-import java.util.logging.Level;
 
 public class Request {
 
@@ -17,11 +14,14 @@ public class Request {
 
         try {
 
-            JSONObject jsasn = new JSONObject(jso.get("data"));
+            JSONObject jsasn = jso.getJSONObject("data");
+
             return jsasn.get("asn").toString();
+
         } catch (Exception e) {
-            AsnBanner.logger.log(Level.SEVERE, "Error !");
+
             e.printStackTrace();
+
         }
 
         return null;
