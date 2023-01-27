@@ -27,13 +27,11 @@ public class Join implements Listener {
         List<?> lst = AsnBanner.plugin.getConfig().getList("list");
 
 
-        if (lst.contains(asn)) {
+        if (!lst.contains(asn)) {
             e.allow();
         } else {
             e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "You are Banned !");
         }
-
-        e.disallow(AsyncPlayerPreLoginEvent.Result.KICK_FULL, "Error, Please Try Again Later !");
 
 
     }
