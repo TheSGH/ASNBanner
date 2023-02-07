@@ -1,6 +1,6 @@
 package com.theloneguy.plugins.asnbanner.Listener;
 
-import com.theloneguy.plugins.asnbanner.AsnBanner;
+import com.theloneguy.plugins.asnbanner.ConfigManager.C_Main;
 import com.theloneguy.plugins.asnbanner.apiRequest.Request;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -24,7 +24,7 @@ public class Join implements Listener {
 
         }
 
-        List<?> lst = AsnBanner.plugin.getConfig().getList("list");
+        List<?> lst = C_Main.getBannedASN_List();
 
 
         if (!lst.contains(asn)) {

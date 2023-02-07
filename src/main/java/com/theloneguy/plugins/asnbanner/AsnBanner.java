@@ -1,5 +1,6 @@
 package com.theloneguy.plugins.asnbanner;
 
+import com.theloneguy.plugins.asnbanner.ConfigManager.C_Main;
 import com.theloneguy.plugins.asnbanner.Listener.Join;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -16,6 +17,7 @@ public final class AsnBanner extends JavaPlugin {
         // Plugin startup logic
         plugin = this;
         logger = this.getLogger();
+        new C_Main().init();
 
         getConfig().options().copyDefaults(true);
         saveDefaultConfig();
